@@ -92,7 +92,11 @@ $(document).ready(function () {
 
     $("#m-section-3 a").on("click", function () {
         var eleId = $(this).attr("id");
-        $.fancybox.open(configPreviewImages(eleId, 4), configFancyboxSettings());
+        if (eleId == "img_case_youeryuan") {
+            $.fancybox.open(configPreviewImages(eleId, 2), configFancyboxSettings());
+        }else {
+            $.fancybox.open(configPreviewImages(eleId, 4), configFancyboxSettings());
+        }
     })
 
     function configPreviewImages(eleId, count) {
